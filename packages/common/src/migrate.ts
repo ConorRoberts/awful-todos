@@ -7,10 +7,7 @@ if (!process.env.DATABASE_URL) {
   throw new Error("Missing DATABASE_URL environment variable");
 }
 
-let url = String(process.env.DATABASE_URL);
-
-// Migrations are only supported via the libsql protocol
-url = url.startsWith("http") ? url.replace(/http(s)?/, "libsql") : url;
+const url = String(process.env.DATABASE_URL);
 
 const authToken = process.env.DATABASE_AUTH_TOKEN;
 
