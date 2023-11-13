@@ -1,0 +1,17 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "baseUrl": "src",
+    "exactOptionalPropertyTypes": false,
+    "verbatimModuleSyntax": true,
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+import BaseLayout, { type BaseLayoutProps } from "./BaseLayout.astro";
+
+type Props = BaseLayoutProps;
+---
+
+<BaseLayout seo={Astro.props.seo}>
+  <div class="pb-16 md:pb-0">
+    <div class="flex min-h-screen flex-col bg-white text-black dark:bg-neutral-900 dark:text-white">
+      <div class="flex flex-1 flex-col"><slot /></div>
+    </div>
+  </div>
+</BaseLayout>

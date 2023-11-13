@@ -1,0 +1,19 @@
+{
+  "name": "awful-todos",
+  "scripts": {
+    "dev": "dotenv -- turbo run dev",
+    "build": "dotenv -- turbo run build",
+    "migrate": "dotenv -- tsx ./packages/common/src/migrate.ts",
+    "generate": "dotenv -- drizzle-kit generate:sqlite",
+    "start:money-monkey": "dotenv -- pnpm -F money-monkey start",
+    "start:app": "dotenv -- pnpm -F app start"
+  },
+  "dependencies": {
+    "dotenv-cli": "^7.3.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.19.13",
+    "tsx": "^3.13.0",
+    "turbo": "^1.10.15"
+  }
+}

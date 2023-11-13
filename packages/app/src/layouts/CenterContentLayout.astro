@@ -1,0 +1,22 @@
+---
+import type { ClassValue } from "clsx";
+import { match } from "ts-pattern";
+import { cn } from "~/utils/shadcn-ui";
+
+type Props = {
+  size?: "sm" | "md" | "lg";
+  className?: string;
+};
+
+const { size = "lg" } = Astro.props;
+
+const sizeClass: ClassValue = match(size)
+  .with("sm", () => "max-w-lg")
+  .with("md", () => "max-w-xl")
+  .with("lg", () => "max-w-3xl")
+  .exhaustive();
+---
+
+<div class={cn("px-2 mx-auto w-full flex flex-col gap-8 my-8", sizeClass, Astro.props.className)}>
+  <slot />
+</div>

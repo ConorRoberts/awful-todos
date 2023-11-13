@@ -1,0 +1,17 @@
+{
+  "arrowParens": "always",
+  "printWidth": 120,
+  "singleQuote": false,
+  "plugins": [
+    "prettier-plugin-astro"
+  ],
+  "tailwindConfig": "./tailwind.config.ts",
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+---
+import { todos } from "common/schema";
+import { eq } from "drizzle-orm";
+import { TodoList } from "~/components/solid/TodoList";
+import PageLayout from "~/layouts/PageLayout.astro";
+import { db } from "~/utils/db";
+const session = await Astro.locals.auth.validate();
+if (!session) {
+  return Astro.redirect("/login");
+}
+const foundTodos = await db.query.todos.findMany({ where: eq(todos.userId, session.user.id) });
+---
+
+<PageLayout seo={{ title: "Home" }}><TodoList todos={foundTodos} client:load /></PageLayout>
