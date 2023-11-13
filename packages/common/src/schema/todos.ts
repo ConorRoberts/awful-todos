@@ -5,6 +5,7 @@ import {
 } from "drizzle-orm";
 import { int, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
+// Todos table
 export const todos = sqliteTable("todos", {
   id: text("id")
     .primaryKey()
