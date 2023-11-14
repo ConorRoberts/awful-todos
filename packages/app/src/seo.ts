@@ -2,7 +2,7 @@ import type { ManifestOptions } from "vite-plugin-pwa";
 
 export const APP_NAME = "Awful Todos";
 export const APP_DESCRIPTION = "This is an Astro application.";
-export const APP_URL = "https://awful-todos.fly.dev";
+export const APP_URL = "https://www.todos.conorroberts.com";
 
 /**
  * Defines the default SEO configuration for the website.
